@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>皮卡丘</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+		body {
+			background: #FFE600;
+			height: 100vh;
+			/*子元素居中*/
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#container {
+			height: 300px;
+			width: 460px;
+			position: relative;
+		}
+		#nose {
+			border: 10px solid transparent;
+			border-top: 10px solid #000;
+			position: absolute;
+			top: 100px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		#nose:before {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 6px;
+			position: absolute;
+			background: #000;
+			top: -16px;
+			left: -10px;
+			border-top-left-radius: 10px 6px;
+			border-top-right-radius: 10px 6px;
+		}
+		.eye {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			background: #2E2E2E;
+			border: 2px solid #000;
+			border-radius: 50%;
+			top: 65px;
+		}
+		.eye:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			background: #fff;
+			border-radius: 12px;
+			top: 2px;
+			left: 10px;
+		}
+		.eye-left {
+			right: 50%;
+			margin-right: 90px;
+		}
+		.eye-right {
+			left: 50%;
+			margin-left: 90px;
+		}
+		.upper-lip {
+			position: absolute;
+			z-index:1;
+			top: 130px;
+			width: 100%;
+			display: flex;
+			justify-content: center;	
+		}
+		.upper-lip:before,
+		.upper-lip:after {
+			content: "";
+			display: block;
+			width: 80px;
+			height: 30px;
+			border: 3px solid #000;		
+			overflow: hidden;	
+			background: #FFE600;}
+		.upper-lip:before {
+			border-top: none;
+			border-right: none;
+			border-bottom-left-radius: 40px 30px;
+			transform: rotateZ(-25deg);
+		}
+		.upper-lip:after {
+			border-top: none;
+			border-left: none;
+			border-bottom-right-radius: 40px 30px;
+			transform: rotateZ(25deg);
+		}
+		.lower-lip {
+			position: absolute;
+			width: 100%;
+			height: 100px;
+			top: 140px;
+			display: flex;
+			justify-content: center;
+		}
+		.lower-lip:before {
+			content: "";
+			width: 100px;
+			border: 3px solid;
+			border-top: none;	
+			background: #FF5A5B;
+			overflow: hidden;
+			box-shadow: 0 20px 0 1px inset #A70F09;
+			border-top-right-radius: 50px 23px;
+			border-top-left-radius: 50px 23px;		
+			border-bottom-left-radius: 50px 77px;
+			border-bottom-right-radius: 50px 77px;	
+		}
+		.check {
+			border: 2px solid #000;			
+			background: #FF1700;
+			position: absolute;
+			width: 70px;
+			height: 70px;
+			border-radius: 45px;
+			top: 140px;
+		}
+		.check-left {
+			right: 50%;
+			margin-right: 100px;
+		}
+		.check-right {
+			left: 50%;
+			margin-left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="nose"></div>
+		<div class="eye eye-left"></div>
+		<div class="eye eye-right"></div>
+		<div class="upper-lip"></div>
+		<div class="lower-lip"></div>
+		<div class="check check-left"></div>
+		<div class="check check-right"></div>
+	</div>
+</body>
+</html>
